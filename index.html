@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angelou Carpio - Creative Developer & UI Designer Portfolio">
     <title>Angelou Carpio | Creative Developer</title>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,400&family=Space+Mono&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -17,66 +16,112 @@
 
 <body>
 
+    <!-- Animated cursor follower -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">AJ</div>
+        <div class="logo">
+            <span class="logo-first">A</span>
+            <span class="logo-second">J</span>
+        </div>
         <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#profile">Profile</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
+    <!-- Hero Section -->
     <header class="container" id="hero">
         <div class="split left">
-            <h1>The Designer</h1>
-            <p>UI/UX & Visual Storyteller</p>
-            <div class="btn-group">
-                <button class="btn btn-design modal-trigger" data-category="figma">
-                    <i class="fa-brands fa-figma"></i> Figma
-                </button>
-                <button class="btn btn-design modal-trigger" data-category="canva">
-                    <i class="fa-solid fa-paintbrush"></i> Canva
-                </button>
+            <div class="split-content">
+                <div class="decorative-line"></div>
+                <h1 class="split-title">The Designer</h1>
+                <p class="split-subtitle">UI/UX & Visual Storyteller</p>
+                <div class="btn-group">
+                    <button class="btn btn-design modal-trigger" data-category="figma">
+                        <i class="fa-brands fa-figma"></i> 
+                        <span>Figma</span>
+                    </button>
+                    <button class="btn btn-design modal-trigger" data-category="canva">
+                        <i class="fa-solid fa-paintbrush"></i> 
+                        <span>Canva</span>
+                    </button>
+                </div>
             </div>
-            <div class="overlay"></div>
+            <div class="split-bg"></div>
         </div>
 
         <div class="split right">
-            <h1>&lt;Full Stack /&gt;</h1>
-            <p>React, Node & Cloud Architecture</p>
-            <div class="btn-group">
-                <button class="btn btn-code modal-trigger" data-category="github">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </button>
-                <button class="btn btn-code modal-trigger" data-category="vercel">
-                    <i class="fa-solid fa-server"></i> Vercel
-                </button>
+            <div class="split-content">
+                <div class="decorative-line"></div>
+                <h1 class="split-title">&lt;Full Stack /&gt;</h1>
+                <p class="split-subtitle">React, Node & Cloud Architecture</p>
+                <div class="btn-group">
+                    <button class="btn btn-code modal-trigger" data-category="github">
+                        <i class="fa-brands fa-github"></i> 
+                        <span>GitHub</span>
+                    </button>
+                    <button class="btn btn-code modal-trigger" data-category="vercel">
+                        <i class="fa-solid fa-server"></i> 
+                        <span>Vercel</span>
+                    </button>
+                </div>
             </div>
-            <div class="overlay"></div>
+            <div class="split-bg"></div>
         </div>
 
-        <div class="scroll-icon">
-            <i class="fa-solid fa-chevron-down"></i>
+        <div class="scroll-indicator">
+            <div class="scroll-icon">
+                <span></span>
+            </div>
+            <p>Scroll</p>
         </div>
     </header>
 
+    <!-- Profile Section -->
     <section id="profile" class="section-dark">
-        <div class="content-wrapper hidden-element">
+        <div class="content-wrapper fade-in">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title-main">About Me</h2>
+            </div>
+            
             <div class="profile-container">
                 <div class="profile-img-box">
-                    <img src="profile.png" alt="Angelou Carpio" class="profile-img">
-                    <div class="img-backdrop"></div>
+                    <div class="img-frame">
+                        <img src="profile.png" alt="Angelou Carpio" class="profile-img">
+                        <div class="img-gradient"></div>
+                    </div>
+                    <div class="floating-badge">
+                        <span>Available for hire</span>
+                    </div>
                 </div>
 
                 <div class="profile-text">
                     <div class="social-icons-small">
-                        <a href="https://www.facebook.com/profile.php?id=61576798612433"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61576798612433" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
                     </div>
-                    <h2>I am Angelou Carpio</h2>
+                    
+                    <h3 class="profile-name">I am Angelou Carpio</h3>
                     <p class="role-subtitle">Professional Web Developer & UI Designer</p>
                     <p class="bio">
                         I create digital experiences that blend creativity with technical excellence. With years of
@@ -86,83 +131,133 @@
 
                     <div class="skills-list">
                         <div class="skill">
-                            <span>UI/UX Design</span>
+                            <div class="skill-header">
+                                <span>UI/UX Design</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
                             <div class="bar-bg">
-                                <div class="bar-fill" style="width: 90%;"></div>
+                                <div class="bar-fill" data-width="90"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <span>React / Next.js</span>
+                            <div class="skill-header">
+                                <span>React / Next.js</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
                             <div class="bar-bg">
-                                <div class="bar-fill" style="width: 85%;"></div>
+                                <div class="bar-fill" data-width="85"></div>
                             </div>
                         </div>
                         <div class="skill">
-                            <span>Node.js / Backend</span>
+                            <div class="skill-header">
+                                <span>Node.js / Backend</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
                             <div class="bar-bg">
-                                <div class="bar-fill" style="width: 75%;"></div>
+                                <div class="bar-fill" data-width="75"></div>
                             </div>
                         </div>
                     </div>
 
-                    <a href="#" class="btn-main">Download CV</a>
+                    <a href="#" class="btn-main">
+                        <span>Download CV</span>
+                        <i class="fa-solid fa-download"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="section-darker">
-        <div class="content-wrapper hidden-element">
-            <h2 class="section-title">Get In Touch</h2>
+        <div class="content-wrapper fade-in">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title-main">Get In Touch</h2>
+            </div>
             <p class="section-desc">Have a project in mind? Let's build something together.</p>
 
             <div class="contact-container">
                 <form class="contact-form" action="https://formspree.io/f/mdaakqwa" method="POST">
-                    <div class="input-group">
-                        <input type="text" name="name" placeholder="Name" required>
-                        <input type="email" name="email" placeholder="Email" required>
+                    <div class="input-row">
+                        <div class="input-wrapper">
+                            <input type="text" name="name" placeholder=" " required>
+                            <label>Your Name</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="email" name="email" placeholder=" " required>
+                            <label>Email Address</label>
+                        </div>
                     </div>
-                    <input type="text" name="subject" placeholder="Subject" required>
-                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
-                    <button type="submit" class="btn-submit">Send Message</button>
+                    <div class="input-wrapper">
+                        <input type="text" name="subject" placeholder=" " required>
+                        <label>Subject</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <textarea name="message" placeholder=" " rows="5" required></textarea>
+                        <label>Your Message</label>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
                 </form>
 
                 <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+639915694735</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>angeloujunoporcarpio.202300153@gamil.com</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="f a-solid fa-location-dot"></i>
-                        <span>Iligan, Philippines</span>
+                    <div class="info-card">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <a href="tel:+639915694735">+639915694735</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <a href="mailto:angeloujunoporcarpio.202300153@gamil.com">angeloujunoporcarpio.202300153@gamil.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Location</h4>
+                                <span>Iligan, Philippines</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Modal -->
     <div id="project-modal" class="modal-overlay">
         <div class="modal-content">
-            <button class="close-modal">&times;</button>
+            <button class="close-modal" aria-label="Close modal">&times;</button>
             <h2 id="modal-title">Projects</h2>
-            <div class="modal-grid" id="modal-grid">
-            </div>
+            <div class="modal-grid" id="modal-grid"></div>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <a href="secret.html" class="danger-link">
-  <p class="danger-text">Click me Plss</p>
-</a>
-        <p>&copy; 2026 Angelou Carpio. All rights reserved.</p>
+        <div class="footer-content">
+            <a href="secret.html" class="danger-link">
+                <p class="danger-text">Don't Click</p>
+            </a>
+            <p class="copyright">&copy; 2026 Angelou Carpio. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 
 </html>
