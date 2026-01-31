@@ -128,9 +128,10 @@ if (dangerText) {
 
   dangerText.addEventListener("click", (e) => {
     e.preventDefault();
-    dangerText.textContent = "Seriously… 😈";
+    dangerText.textContent = "HAHAHAHA… 😈";
     setTimeout(() => {
       window.location.href = "secret.html";
     }, 900);
   });
 }
+
