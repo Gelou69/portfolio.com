@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Video Navigation</title>
+    <style>
+        /* Remove borders and fit to screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        #bgVideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        /* Button Styling */
+        #moveOnBtn {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid white;
+            border-radius: 10px;
+            backdrop-filter: blur(10px); /* Modern frosted glass effect */
+            cursor: pointer;
+            display: none; /* Hidden until 2:09 */
+            opacity: 0;
+            transition: opacity 1s ease, transform 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        #moveOnBtn:hover {
+            background: white;
+            color: black;
+            transform: translate(-50%, -52%);
+        }
+
+        /* Trigger for button appearance */
+        .show-btn {
+            display: block !important;
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <video id="bgVideo" autoplay playsinline>
+        <source src="umaasa.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <button id="moveOnBtn" onclick="window.location.href='index.html'">
+        Kung ako nalang diay? HAHA
+    </button>
+
+    <script>
+       const video = document.getElementById('bgVideo');
+const btn = document.getElementById('moveOnBtn');
+
+const startTime = 98;  // 1:38 in seconds
+const endTime = 123;   // 2:09 in seconds
+let playCount = 1;     // Track which play-through we are on
+
+// 1. Force initial start at 1:38
+video.addEventListener('loadedmetadata', () => {
+    video.currentTime = startTime;
+});
+
+// 2. Control looping, volume, and button visibility
+video.addEventListener('timeupdate', function() {
+    if (video.currentTime >= endTime) {
+        // Show the button when it reaches the end time for the first time
+        btn.classList.add('show-btn');
+        
+        // Increment our play counter
+        playCount++;
+
+        // After the 2nd play starts, drop volume to 30%
+        if (playCount >= 2) {
+            video.volume = 0.3; 
+        }
+
+        // Loop back to the start time (1:38)
+        video.currentTime = startTime;
+        video.play();
+    }
+});
+
+// 3. Audio / Autoplay Bypass Logic
+window.addEventListener('load', () => {
+    video.muted = false; 
+    video.play().catch(() => {
+        video.muted = true;
+        video.play();
+    });
+});
+    </script>
+
+</body>
+</html>

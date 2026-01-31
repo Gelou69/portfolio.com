@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelou Carpio | Creative Developer</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,400&family=Space+Mono&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">AJ</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="container" id="hero">
+        <div class="split left">
+            <h1>The Designer</h1>
+            <p>UI/UX & Visual Storyteller</p>
+            <div class="btn-group">
+                <button class="btn btn-design modal-trigger" data-category="figma">
+                    <i class="fa-brands fa-figma"></i> Figma
+                </button>
+                <button class="btn btn-design modal-trigger" data-category="canva">
+                    <i class="fa-solid fa-paintbrush"></i> Canva
+                </button>
+            </div>
+            <div class="overlay"></div>
+        </div>
+
+        <div class="split right">
+            <h1>&lt;Full Stack /&gt;</h1>
+            <p>React, Node & Cloud Architecture</p>
+            <div class="btn-group">
+                <button class="btn btn-code modal-trigger" data-category="github">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </button>
+                <button class="btn btn-code modal-trigger" data-category="vercel">
+                    <i class="fa-solid fa-server"></i> Vercel
+                </button>
+            </div>
+            <div class="overlay"></div>
+        </div>
+
+        <div class="scroll-icon">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <section id="profile" class="section-dark">
+        <div class="content-wrapper hidden-element">
+            <div class="profile-container">
+                <div class="profile-img-box">
+                    <img src="profile.png" alt="Angelou Carpio" class="profile-img">
+                    <div class="img-backdrop"></div>
+                </div>
+
+                <div class="profile-text">
+                    <div class="social-icons-small">
+                        <a href="https://www.facebook.com/profile.php?id=61576798612433"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <h2>I am Angelou Carpio</h2>
+                    <p class="role-subtitle">Professional Web Developer & UI Designer</p>
+                    <p class="bio">
+                        I create digital experiences that blend creativity with technical excellence. With years of
+                        experience in full-stack development and design, I help brands stand out in the digital
+                        landscape.
+                    </p>
+
+                    <div class="skills-list">
+                        <div class="skill">
+                            <span>UI/UX Design</span>
+                            <div class="bar-bg">
+                                <div class="bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>React / Next.js</span>
+                            <div class="bar-bg">
+                                <div class="bar-fill" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Node.js / Backend</span>
+                            <div class="bar-bg">
+                                <div class="bar-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-main">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-darker">
+        <div class="content-wrapper hidden-element">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-desc">Have a project in mind? Let's build something together.</p>
+
+            <div class="contact-container">
+                <form class="contact-form" action="https://formspree.io/f/mdaakqwa" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+639915694735</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>angeloujunoporcarpio.202300153@gamil.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="f a-solid fa-location-dot"></i>
+                        <span>Iligan, Philippines</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2 id="modal-title">Projects</h2>
+            <div class="modal-grid" id="modal-grid">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="secret.html" class="danger-link">
+  <p class="danger-text">Don’t Click</p>
+</a>
+        <p>&copy; 2026 Angelou Carpio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
